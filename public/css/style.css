@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Versão DESKTOP */
+/*----Cabeçalho----*/
+header {
+    position: sticky;
+    top: 0;
+    background-color: #11131A;
+    border-bottom: solid #B71C1C 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+}
+
+.navegacaoSuperior {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 5% auto 1%;
+}
+
+.navegacaoSuperior img {
+    height: 8.88vh;
+    width: auto;
+    width: 100%;
+}
+
+.navegacaoSuperior a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1cqw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 24px */
+    border-radius: 20px;
+}
+
+.navegacaoSuperior>form {
+    display: flex;
+    align-items: center;
+    gap: 0.5%;
+}
+
+.navegacaoSuperior form>input {
+    background-color: #11131A;
+    border-radius: 20px;
+    border: 2px solid #30363D;
+    width: 37.5vw;
+    height: 6.11vh;
+    color: #FFF;
+
+    font-family: Poppins;
+    font-size: 1cqw;
+    font-style: normal;
+    font-weight: 275;
+    line-height: 100%;
+    /* 24px */
+
+    padding-left: 1%;
+}
+
+.navegacaoSuperior form>button {
+    background-color: #11131A;
+}
+
+.navegacaoSuperior form>button:hover {
+    background-color: #30363D;
+    border-radius: 20px;
+}
+
+.navegacaoSuperior form>button>img {
+    height: 6.37vh;
+}
+
+.navegacaoSuperior a:nth-of-type(2) {
+    background-color: #B71C1C;
+    height: 5vh;
+    width: 9.53vw;
+    text-align: center;
+}
+
+.navegacaoSuperior a:nth-of-type(2):hover {
+    background-color: #C94B4B;
+}
+
+.areaLogin {
+    display: flex;
+    gap: 10%;
+}
+
+.areaLogin a:nth-of-type(1) {
+    background-color: #11131A;
+    border: 2px solid #30363D;
+    height: 5vh;
+    width: 8.33vw;
+}
+
+.areaLogin a:nth-of-type(1):hover {
+    background-color: #30363D;
+}
+
+.areaLogin a:nth-of-type(2) {
+    background-color: #B71C1C;
+    border: 2px solid #30363D;
+    height: 5vh;
+    width: 8.33vw;
+}
+
+.areaLogin a:nth-of-type(2):hover {
+    background-color: #C94B4B;
+}
+
+/*-------------------*/
+
+/*--Introdução--*/
+.introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2%; /* O mesmo respiro que você usou nas outras seções */
+    color: white;
+}
+
+.imagem-banner {
+    width: 90%; /* Ela tenta ocupar 90% do espaço... */
+    max-width: 700px; /* ...MAS para de crescer quando atinge 700px! O segredo é esse. */
+    height: auto; /* Mantém a proporção sem amassar a imagem */
+    border-radius: 12px; 
+    border: 2px solid #30363D; 
+}
+
+.textoIntroducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%; /* Não deixa o texto ir até a borda da tela */
+    margin-top: 2%;
+}
+
+.textoIntroducao h2 {
+    font-size: 1.7cqw; /* Exatamente o mesmo tamanho do seu <h1> */
+    font-weight: 700;
+    color: #B71C1C; /* O vermelho da sua barra lateral */
+}
+
+.textoIntroducao p {
+    font-size: 1cqw; /* O mesmo tamanho da fonte da identificação dos cards */
+    font-weight: 300;
+    margin-top: 1%;
+}
+/*-------------------*/
+
+/*----Navegação Lateral----*/
+body>div {
+    display: flex;
+    width: 100%;
+}
+
+.navegacaoLateral {
+    background-color: #B71C1C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 11.45vw;
+    height: 88vh;
+}
+
+.navegacaoLateral>ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 0;
+}
+
+.navegacaoLateral a {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #11131A;
+    height: 5vh;
+    width: 8.33vw;
+    text-align: center;
+    color: white;
+    font-size: 1.3cqw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 24px */
+    border-radius: 20px;
+}
+
+.navegacaoLateral a:hover {
+    background-color: #30363D;
+}
+
+/*------------------------*/
+
+main {
+    background-color: #11131A;
+    width: 88.55vw;
+    height: 88vh;
+    overflow-y: scroll;
+}
+
+/*--Seção Pokémons em Destaque--*/
+.pokemonsDestaque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding-top: 1%;
+}
+
+.pokemonsDestaque h1 {
+    font-size: 1.7cqw;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.cardsPokemonsDestaque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.pokemonDestaque {
+    width: 15.62vw;
+    height: 28, 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    border-radius: 12px;
+    background: #161B22;
+}
+
+.pokemonDestaque:hover {
+    box-shadow: 0 4px 12px 0 rgba(255, 59, 59, 0.70);
+    scale: 1.1;
+}
+
+.pokemonDestaque h2 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.pokemonDestaque img {
+    height: 13vw;
+}
+
+/*---------------------------*/
+
+/*--Seção Lista de Pokémons--*/
+.listaPokemons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    color: white;
+}
+
+.listaPokemons h1 {
+    font-size: 1.7cqw;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.ordenador {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1%;
+}
+
+.ordenador form {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    margin-right: 1%;
+}
+
+.ordenador form>label {
+    font-size: 0.7cqw;
+    white-space: nowrap;
+}
+
+.ordenador form>select {
+    background-color: white;
+    color: #11131A;
+    border-radius: 15px;
+    padding: 0.2% 0.6%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7cqw;
+    cursor: pointer;
+    outline: none;
+}
+
+.lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    row-gap: 2vh;
+}
+
+.pokemons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #161B22;
+    width: 13.02vw;
+    height: 35vh;
+    padding: 1%;
+}
+
+.pokemons:hover {
+    box-shadow: 0 4px 12px 0 rgba(255, 59, 59, 0.70);
+    scale: 1.05;
+}
+
+.pokemons img {
+    width: 10.41vw;
+}
+
+.identificacao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.identificacao {
+    font-size: 1cqw;
+}
+
+.identificacao p:nth-of-type(1) {
+    font-weight: 600;
+}
+
+.identificacao p:nth-of-type(2) {
+    font-weight: 300;
+}
+
+.tipagem {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    font-size: 0.9cqw;
+}
+
+.psiquico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #F366B9;
+    width: 5.20vw;
+    color: white;
+}
+
+.metal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #9EB7B8;
+    width: 5.20vw;
+    color: black;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200%;
+    padding-top: 10%;
+}
+
+button {
+    cursor: pointer;
+    background-color: #161B22;
+    border-radius: 100px;
+}
+
+.favorito:hover {
+    box-shadow: 0 4px 12px 0 rgba(255, 215, 0, 0.70);
+    scale: 1.1;
+}
+
+.adicionar:hover {
+    scale: 1.1;
+}       
+/*-----------------------------*/
+
+/*----Footer----*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 2px #B71C1C;
+    margin-top: 1%;
+    padding: 0.5%;
+    color: #B71C1C;
+    font-size: 0.75cqw;
+}
+
+footer>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5%;
+}
+
+footer>ul>li>a{
+    color: white;
+}
+
+/*----------------*/
+/* Versão TABLET  */
+/*----------------*/
+@media screen and (max-width: 1024px) {
+
+    /*-- Header e Introdução --*/
+    .areaLogin a:nth-of-type(1),
+    .areaLogin a:nth-of-type(2) {
+        width: auto; 
+        height: auto; 
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .imagem-banner {
+        max-width: 550px;
+    }
+
+    .textoIntroducao {
+        width: 90%;
+    }
+
+    .textoIntroducao h2 {
+        font-size: 24px;
+        margin-top: 15px;
+    }
+
+    .textoIntroducao p {
+        font-size: 16px;
+    }
+
+    /*-- Lista e Cards --*/
+    .lista {
+        gap: 16px;
+    }
+
+    .pokemons {
+        width: 22vw;
+        height: auto;
+        min-height: 260px;
+        padding: 12px;
+    }
+
+    .acoes {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+        padding: 15px 10px 0 10px;
+    }
+
+    .pokemonDestaque {
+        width: 22vw; 
+        height: auto;
+        padding: 15px;
+    }
+
+    .identificacao {
+        font-size: 14px;
+    }
+    
+    .tipagem {
+        font-size: 12px;
+    }
+
+    .psiquico, .metal {
+        width: auto;
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
+    .pokemons img {
+        width: 15vw;
+    }
+
+    /*-- Ordenação --*/
+    .ordenador form > label {
+        font-size: 14px;
+    }
+
+    .ordenador form > select {
+        font-size: 14px;
+        padding: 4px 12px;
+    }
+
+    /*-- Footer --*/
+    footer {
+        font-size: 14px;
+        padding: 15px 5%;
+        gap: 10px;
+    }
+}
+
+/*----------------*/
+/* Versão MOBILE  */
+/*----------------*/
+@media screen and (max-width: 600px) {
+
+    /*-- Header e Navegação Superior --*/
+    header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .navegacaoSuperior {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navegacaoSuperior > a:nth-of-type(2) {
+        display: none; 
+    }
+
+    .navegacaoSuperior img {
+        height: 60px; 
+        width: auto;
+    }
+
+    .areaLogin a:nth-of-type(1),
+    .areaLogin a:nth-of-type(2) {
+        width: auto; 
+        height: auto; 
+        padding: 8px 16px; 
+        font-size: 14px; 
+    }
+
+    .navegacaoSuperior form {
+        order: 10; 
+        width: 100%; 
+    }
+
+    .navegacaoSuperior form > input {
+        width: 100%; 
+        height: 45px;
+        font-size: 14px;
+    }
+
+    /*-- Introdução e Banner --*/
+    .textoIntroducao {
+        width: 95%;
+    }
+
+    .textoIntroducao h2 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .textoIntroducao p {
+        font-size: 14px;
+    }
+
+    /*-- Barra Lateral e Menu --*/
+    body > div {
+        flex-direction: column; 
+    }
+
+    .navegacaoLateral {
+        width: 100%;
+        height: auto;
+    }
+
+    .navegacaoLateral > ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: visible;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .navegacaoLateral a {
+        width: auto; 
+        padding: 8px 20px;
+        font-size: 14px;
+        white-space: nowrap; 
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        overflow-y: visible; 
+    }
+
+    /*-- Pokémons em Destaque --*/
+    .pokemonsDestaque h1, .listaPokemons h1 {
+        font-size: 20px; 
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .pokemonDestaque h2 {
+        font-size: 18px; 
+        margin-top: 10px;
+    }
+
+    .cardsPokemonsDestaque {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pokemonDestaque {
+        width: 80%; 
+        max-width: 280px; 
+        height: auto;
+        padding: 20px;
+    }
+
+    .pokemonDestaque img {
+        width: 65%; 
+        height: auto;
+        display: block; 
+        margin: 0 auto;
+    }
+
+    /*-- Cards e Lista --*/
+    .lista {
+        justify-content: center; 
+        column-gap: 4%;
+        row-gap: 20px;
+        padding: 0 10px;
+    }
+
+    .pokemons {
+        width: 46%;
+        min-height: 240px;
+    }
+
+    .pokemons img {
+        width: 75%; 
+        display: block; 
+        margin: 0 auto;
+    }
+
+    .identificacao {
+        font-size: 16px; 
+    }
+
+    .psiquico, .metal {
+        padding: 8px 16px; 
+        font-size: 14px; 
+        border-radius: 12px; 
+    }
+}
